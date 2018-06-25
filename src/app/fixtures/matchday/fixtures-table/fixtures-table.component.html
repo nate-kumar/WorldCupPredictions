@@ -1,0 +1,29 @@
+<div class="fixtures-table-container">
+  <div class="fixtures-table-header">
+    <div class="titleMatchDate">Date</div>
+    <div class="titleMatchTime border-left">Kick-off</div>
+    <div class="titleMatchGroup">Group</div>
+    <div class="titleScore">Score</div>
+    <div class="titleTeamOne">Team 1</div>
+    <div class="titleTeamTwo">Team 2</div>
+    <div class="titleResult">Result</div>
+    <div class="titlePoints">Pts</div>
+  </div>
+  <ng-container *ngFor="let match of matches">
+    <div class="fixtures-table-row" *ngIf="match!=='break'">
+      <div class="matchDate">Fri, 10 June</div>
+      <div class="matchTime">20:00</div>
+      <div class="matchGroup">A</div>
+      <img class="teamOneFlag" [src]="flagTeamOne">
+      <div class="teamOneName">England</div>
+      <div class="teamOneScore">2</div>
+      <div class="teamTwoScore">1</div>
+      <div class="teamTwoName">France</div>
+      <img class="teamTwoFlag" [src]="flagTeamTwo">
+      <div class="teamOneScorePredicted">3</div>
+      <div class="teamTwoScorePredicted">1</div>
+      <div class="points">4</div>
+    </div>
+    <div class="blank-row" *ngIf="match==='break'"></div>
+  </ng-container>
+</div>

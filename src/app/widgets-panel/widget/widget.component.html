@@ -1,0 +1,12 @@
+<div class="widget">
+  <div class="table-header bottom-border">
+    <div class="justify-center">Rank</div>
+    <div>Table Position</div>
+    <div class="justify-center">Pts.</div>
+  </div>
+  <div class="table-row middle-border" *ngFor="let player of players">
+      <div class="justify-center">{{player.playerRank}}</div>
+      <div>{{player.playerName}}</div>
+      <div class="justify-center">{{player.playerPoints}}</div>
+    </div>
+</div>

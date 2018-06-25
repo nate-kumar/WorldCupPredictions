@@ -1,0 +1,139 @@
+.fixtures-table-container {
+    display: grid;
+    grid-gap: 8px;
+    grid-auto-rows: minmax(6px,auto);
+}
+
+.fixtures-table-header {
+    display: grid;
+    height: 30px;
+    grid-template-columns: 100px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+    background: rgb(133, 9, 9);
+    color: white;
+}
+
+.fixtures-table-row {
+    display: grid;
+    height: 15px;
+    grid-template-columns: 100px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.matchDate {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.matchTime {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.matchGroup {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.teamOneFlag {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.teamOneName {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: right;
+}
+
+.teamOneScore {
+    grid-column: 7 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.teamTwoFlag {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    grid-column: 10 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.teamTwoName {
+    grid-column: 9 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: left;
+}
+
+.teamTwoScore {
+    grid-column: 8 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.teamOneScorePredicted {
+    grid-column: 12 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.teamTwoScorePredicted {
+    grid-column: 13 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.points {
+    grid-column: 15 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleMatchDate {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleMatchTime {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleMatchGroup {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleTeamOne {
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titleScore {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titleTeamTwo {
+    grid-column: 9 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titleResult {
+    grid-column: 12 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titlePoints {
+    grid-column: 15 / span 1;
+    grid-row: 1 / span 1;
+}

@@ -1,0 +1,28 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.player-name {
+    color: white;
+}
+
+.partner-name {
+    color: white;
+}
+
+.centred-box {
+    display:grid;
+    align-items: center;
+    text-align: center;
+}
+
+.side-border-short {
+    display: grid;
+    align-items: center;
+    height: 80%;
+    border-left: 1px solid rgba(20, 13, 13, 0.22);
+}
