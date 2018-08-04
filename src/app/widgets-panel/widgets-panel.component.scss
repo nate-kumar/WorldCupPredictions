@@ -16,12 +16,7 @@
     height: 200px;
 }
 
-.centred-box {
-    display:grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-}
+
 
 .grid-row2of3 {
     grid-column: 2 / span 1;

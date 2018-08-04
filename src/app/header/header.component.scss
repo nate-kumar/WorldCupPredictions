@@ -1,7 +1,9 @@
+@import '~styles.scss';
+
 .header-container {
     display: grid;
     grid-template-columns: 100px auto 150px 150px;
-    background: linear-gradient(rgb(167, 7, 7), rgb(117, 7, 7));
+    background: linear-gradient($milano-red, $dark-burgundy);
     height: 96px;
 }
 
@@ -53,8 +55,6 @@
     border-left: 1px solid rgba(20, 13, 13, 0.22);
 }
 
-.bottom-border {
-    border-bottom: 4px solid;  
-    border-image-source: linear-gradient(rgb(117, 7, 7), rgb(77, 0, 0));
-    border-image-slice: 100;
+.bottom-border { 
+    @include bottom-border-gradient(4px, $dark-burgundy, $temptress); 
 }

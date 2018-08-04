@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-fixtures-table',
   templateUrl: './fixtures-table.component.html',
-  styleUrls: ['./fixtures-table.component.css'],
+  styleUrls: ['./fixtures-table.component.scss'],
   providers: [MatchdayDataService]
 })
 export class FixturesTableComponent implements OnInit {
