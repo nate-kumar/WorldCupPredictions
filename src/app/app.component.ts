@@ -10,13 +10,11 @@ export class AppComponent implements OnInit {
   showWidgetPanel: boolean;
 
   ngOnInit() {
-    console.log('test');
     this.showWidgetPanel = true;
   }
 
   widgetPanelToggle() {
       this.showWidgetPanel = !this.showWidgetPanel;
-      console.log('widget Toggle');
   }
 
 

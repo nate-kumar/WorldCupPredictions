@@ -1,14 +1,15 @@
+import { MatchdayDataService } from './../../../../../e2e/app/matchday-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fixtures-table',
   templateUrl: './fixtures-table.component.html',
-  styleUrls: ['./fixtures-table.component.css']
+  styleUrls: ['./fixtures-table.component.css'],
+  providers: [MatchdayDataService]
 })
 export class FixturesTableComponent implements OnInit {
 
-  flagTeamOne = 'assets/images/english-flag-small.png';
-  flagTeamTwo = 'assets/images/french-flag-small.png';
+
 
   matches: string[] = [
     'match', 'match', 'match',
@@ -20,11 +21,14 @@ export class FixturesTableComponent implements OnInit {
     'match', 'match', 'match',
   ];
 
+  matchData;
 
 
-  constructor() { }
+
+  constructor(private matchdayDataService: MatchdayDataService) { }
 
   ngOnInit() {
+    this.matchData = this.matchdayDataService.matches;
   }
 
 }

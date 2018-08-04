@@ -1,7 +1,7 @@
 .fixtures-table-container {
     display: grid;
-    grid-gap: 8px;
-    grid-auto-rows: minmax(6px,auto);
+    grid-gap: 4px;
+    /* grid-auto-rows: minmax(6px,auto); */
 }
 
 .fixtures-table-header {
@@ -19,84 +19,18 @@
 
 .fixtures-table-row {
     display: grid;
-    height: 15px;
+    height: 30px;
     grid-template-columns: 100px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     justify-items: center;
     align-items: center;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);
 }
 
 
-.matchDate {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-}
 
-.matchTime {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.matchGroup {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.teamOneFlag {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    grid-column: 5 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.teamOneName {
-    grid-column: 6 / span 1;
-    grid-row: 1 / span 1;
-    justify-self: right;
-}
-
-.teamOneScore {
-    grid-column: 7 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.teamTwoFlag {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    grid-column: 10 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.teamTwoName {
-    grid-column: 9 / span 1;
-    grid-row: 1 / span 1;
-    justify-self: left;
-}
-
-.teamTwoScore {
-    grid-column: 8 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.teamOneScorePredicted {
-    grid-column: 12 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.teamTwoScorePredicted {
-    grid-column: 13 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.points {
-    grid-column: 15 / span 1;
-    grid-row: 1 / span 1;
-}
 
 .titleMatchDate {
     grid-column: 1 / span 1;

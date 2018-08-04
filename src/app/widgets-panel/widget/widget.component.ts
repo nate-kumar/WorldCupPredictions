@@ -16,7 +16,6 @@ export class WidgetComponent implements OnInit {
 
   ngOnInit() {
     this.players = this.scoreboardS.scores;
-    console.log(this.players[0].playerName);
   }
 
 }

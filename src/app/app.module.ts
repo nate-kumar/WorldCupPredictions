@@ -1,6 +1,7 @@
 import { ScoreboardService } from './scoreboard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,7 @@ import { FixturesComponent } from './fixtures/fixtures.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatchdayComponent } from './fixtures/matchday/matchday.component';
 import { FixturesTableComponent } from './fixtures/matchday/fixtures-table/fixtures-table.component';
+import { MatchItemComponent } from './fixtures/matchday/fixtures-table/match-item/match-item.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { FixturesTableComponent } from './fixtures/matchday/fixtures-table/fixtu
     FixturesComponent,
     FooterComponent,
     MatchdayComponent,
-    FixturesTableComponent
+    FixturesTableComponent,
+    MatchItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [ScoreboardService],
   bootstrap: [AppComponent]
