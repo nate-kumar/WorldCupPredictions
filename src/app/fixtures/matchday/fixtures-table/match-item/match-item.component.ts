@@ -1,3 +1,4 @@
+import { FlagsService } from './../../../../../../e2e/app/flags.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,14 +8,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MatchItemComponent implements OnInit {
 
-  flagTeamOne = 'assets/images/english-flag-small.png';
-  flagTeamTwo = 'assets/images/french-flag-small.png';
+  flagTeamOne;
+  flagTeamTwo;
+
   @Input() matchItemData;
 
-  constructor() { }
+  constructor(private flagsService: FlagsService) { }
+
 
   ngOnInit() {
     console.log(this.matchItemData.teamOneName);
+    console.log(this.flagsService.getFlag(this.matchItemData.teamOneName));
+
+    this.flagTeamOne = this.flagsService.getFlag(this.matchItemData.teamOneName);
+    this.flagTeamTwo = this.flagsService.getFlag(this.matchItemData.teamTwoName);
   }
 
 }
+

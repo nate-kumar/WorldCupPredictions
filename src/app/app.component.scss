@@ -1,6 +1,14 @@
 @import '~styles.scss';
 
-.app-size {
+$headershown: 'true';
+$headerheight: 200px;
+
+.app-container {
   display: grid;
-  grid-template-rows: 100px 200px auto 80px;
+  grid-template-rows: 100px var(--header-height) auto 80px;
+  --header-height: 0px;
+}
+
+.hide {
+  display:none;
 }

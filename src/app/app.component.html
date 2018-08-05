@@ -1,7 +1,7 @@
-<div class="app-size">
+<div class="app-container" #appContainer>
   <app-header (widgetToggled)="widgetPanelToggle()"></app-header>
   <app-widgets-panel *ngIf="showWidgetPanel"></app-widgets-panel>
-  <app-fixtures></app-fixtures>
+  <router-outlet [hidden]="showWidgetPanel"></router-outlet>
   <app-footer></app-footer>
 </div>
 <!-- <div class="test">text</div> -->

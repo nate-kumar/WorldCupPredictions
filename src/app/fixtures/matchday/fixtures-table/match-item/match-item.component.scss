@@ -19,7 +19,6 @@
     width: auto;
     height: auto;
     grid-column: 5 / span 1;
-    grid-row: 1 / span 1;
 }
 
 .teamOneName {
@@ -46,6 +45,7 @@
     grid-column: 9 / span 1;
     grid-row: 1 / span 1;
     justify-self: left;
+    // color: rgb(230,230,230);
 }
 
 .teamTwoScore {
@@ -67,3 +67,56 @@
     grid-column: 15 / span 1;
     grid-row: 1 / span 1;
 }
+
+.img {
+    height: auto;
+    width: 60%;
+    grid-row: 1 / span 1;
+    transform: scale(1.3) skew(-3deg);
+}
+
+@mixin flag-background-direction($direction, $colorleft, $colormiddle, $colorright) {
+    mask-image: linear-gradient(to $direction, $colorleft, $colormiddle, $colorright);
+    @if $direction == 'left' { 
+        grid-column: 9 / span 2;
+        justify-self: right;
+    }
+    @else if $direction == 'right' { 
+        grid-column: 5 / span 2; 
+        justify-self: left;
+    }
+}
+
+.img-teamOne {
+    @include flag-background-direction(right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.img-teamTwo {
+    @include flag-background-direction(left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 95%);
+}
+
+.z1 {
+    z-index: 1;
+}
+
+.z0 {
+    z-index: 0;
+}
+
+// .fixtures-table-left {
+//     grid-column: 1 / span 4;
+//     display: grid;
+//     grid-template-columns: 150px 100px 50px 20px 25px;
+// }
+
+// .fixtures-table-middle {
+//     grid-column: 5 / span 6;
+//     display: grid;
+//     grid-template-columns: 25px 150px 25px 25px 150px 25px;
+// }
+
+// .fixtures-table-right {
+//     grid-column: 11 / span 5;
+//     display: grid;
+//     grid-template-columns: 20px 25px 25px 20px 25px;
+// }

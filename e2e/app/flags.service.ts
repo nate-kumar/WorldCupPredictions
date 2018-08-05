@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class FlagsService {
 
   constructor() { }
+
+  getFlag(country: string) {
+    return 'assets/images/national_flags_svg/Flag_of_' + country + '.svg';
+  }
 }

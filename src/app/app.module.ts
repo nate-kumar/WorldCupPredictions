@@ -1,3 +1,5 @@
+import { FlagsService } from './../../e2e/app/flags.service';
+import { RoutingModule } from './routing.module';
 import { ScoreboardService } from './scoreboard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -31,9 +33,10 @@ import { TestCompComponent } from './test-comp/test-comp.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
-  providers: [ScoreboardService],
+  providers: [ScoreboardService, FlagsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { MatchdayDataService } from './../../../../../e2e/app/matchday-data.service';
+import { MatchdayDataService } from '../../../../../e2e/app/matchday-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -7,7 +7,7 @@
 .fixtures-table-header {
     display: grid;
     height: 30px;
-    grid-template-columns: 100px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
+    grid-template-columns: 150px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
     font-size: 12px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -19,14 +19,16 @@
 
 .fixtures-table-row {
     display: grid;
-    height: 30px;
-    grid-template-columns: 100px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
-    font-size: 12px;
+    height: 70px;
+    grid-template-columns: 150px 100px 50px 20px 25px 150px 25px 25px 150px 25px 20px 25px 25px 20px 25px;
+    font-size: 13px;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     justify-items: center;
     align-items: center;
-    background-color: white;
-    border: 1px solid rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(226, 226, 226);
+    overflow: hidden;
 }
 
 

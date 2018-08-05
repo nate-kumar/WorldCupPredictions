@@ -1,4 +1,4 @@
-import { ScoreboardService } from './../../scoreboard.service';
+import { ScoreboardService } from '../../scoreboard.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

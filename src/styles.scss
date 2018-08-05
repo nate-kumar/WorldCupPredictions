@@ -2,6 +2,11 @@
 html, body {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 
@@ -16,8 +21,7 @@ $temptress: rgb(77,0,0);
 
 //Font Families
 $roboto: 'Roboto', sans-serif;
-
-
+$raleway: 'Raleway', sans-serif;
 
 @mixin bottom-border-gradient($thickness, $dark-color, $light-color) {
     border-bottom: $thickness solid;  

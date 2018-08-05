@@ -10,6 +10,10 @@ Other
 
 $text-color-title: white;
 
+$title-font: $raleway;
+$normal-font: $roboto;
+
+
 @mixin widget-columns {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
@@ -36,7 +40,7 @@ $text-color-title: white;
     background: $dark-burgundy;
 
     color: $text-color-title;
-    font-family: 'Raleway', sans-serif;
+    font-family: $title-font;
     font-size: 14px;
     font-weight: bold;
 }
@@ -51,7 +55,7 @@ $text-color-title: white;
     rgba($dark-burgundy, 0.95), rgba($rustic-red, 0.95) 2px);
     
     color: darken($text-color-title, 15%);
-    font-family: $roboto;
+    font-family: $normal-font;
     font-size: 12px;
     font-weight: bold;
 }
