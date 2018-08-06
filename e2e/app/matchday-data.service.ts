@@ -41,11 +41,13 @@ export class MatchdayDataService {
   constructor(private flagsService: FlagsService,
     private http: HttpClient) {
     console.log(this.configUrl);
+    console.log(this.http.get(this.configUrl));
   }
 
 
 
   getData() {
     return this.http.get(this.configUrl);
+
   }
 }

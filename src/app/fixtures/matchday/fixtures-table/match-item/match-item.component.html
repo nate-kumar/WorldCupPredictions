@@ -18,17 +18,22 @@
 </div> -->
 
 
-<img class="img img-teamOne teamOneFlag" [src]="flagTeamOne">
+
 <div class="matchDate">{{matchItemData.matchDate}}</div>
 <div class="matchTime">{{matchItemData.matchTime}}</div>
 <div class="matchGroup">{{matchItemData.matchGroup}}</div>
-<!-- <img class="teamOneFlag" [src]="flagTeamOne"> -->
+<div class="teamOneFlagContainer">
+    <img class="img img-teamOne teamOneFlag" [src]="flagTeamOne">
+    <!-- <div class="test"></div> -->
+</div>
 <div class="z1 teamOneName">{{matchItemData.teamOneName}}</div>
 <div class="z1 teamOneScore">2</div>
 <div class="z1 teamTwoScore">1</div>
 <div class="z1 teamTwoName">{{matchItemData.teamTwoName}}</div>
-<!-- <img class="teamTwoFlag" [src]="flagTeamTwo"> -->
+<div class="teamTwoFlagContainer">
+    <img class="img img-teamTwo teamTwoFlag" [src]="flagTeamTwo">
+</div>
 <div class="teamOneScorePredicted">3</div>
 <div class="teamTwoScorePredicted">1</div>
 <div class="points">4</div>
-<img class="img img-teamTwo teamTwoFlag" [src]="flagTeamTwo">
+

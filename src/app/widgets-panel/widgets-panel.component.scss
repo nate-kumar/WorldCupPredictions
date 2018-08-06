@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 8fr 1fr;
-    background-color: rgb(240, 236, 217);
+    background-color: rgb(61, 61, 61);
     background-repeat: repeat;
-    background-image: url("/assets/images/arabesque.png");
+    background-image: url(/assets/images/arabesque.png);
     background-blend-mode: multiply;
     height: 100%;
 
@@ -15,8 +15,6 @@
     grid-template-rows: 1fr 8fr 1fr;
     height: 200px;
 }
-
-
 
 .grid-row2of3 {
     grid-column: 2 / span 1;
