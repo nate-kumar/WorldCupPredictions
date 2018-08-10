@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~_zindex.scss';
+@import '~_colours.scss';
+
 html, body {
     padding: 0px;
     margin: 0px;
@@ -10,14 +12,7 @@ html, body {
 }
 
 
-//Colour palette
 
-$rustic-red: rgb(72,4,4);
-$temptress: rgb(77,0,0);
-$lonestar: rgb(109,1,1);
-$dark-burgundy: rgb(119,15,5);
-$burnt-umber: rgb(134,19,19);
-$milano-red: rgb(167,7,7);
 
 //Font Families
 $roboto: 'Roboto', sans-serif;

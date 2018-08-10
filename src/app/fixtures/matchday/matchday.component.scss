@@ -4,7 +4,8 @@
     display: grid;
     grid-template: 30px auto 30px / 1fr 120px 5px auto 20px 1fr;
     height: auto;
-    background: rgb(240, 240, 240);
+    // background: rgb(240, 240, 240);
+    background: white;
     background-image: url(/assets/images/body-bg5.png);
     border-bottom: 1px solid rgba(20, 13, 13, 0.22);
 }

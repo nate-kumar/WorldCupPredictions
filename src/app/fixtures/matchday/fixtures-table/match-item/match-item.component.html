@@ -1,39 +1,20 @@
-<!-- <div class="fixtures-table-left">
-    <img class="img img-teamOne teamOneFlag" [src]="flagTeamOne">
-    <div class="matchDate">{{matchItemData.matchDate}}</div>
-    <div class="matchTime">{{matchItemData.matchTime}}</div>
+<div [ngClass]="{'today-active':matchItemData.matchGroup === 'A'}" class="match-item-container" #matchItemContainer>
+    <div class="matchDate border-right">{{matchItemData.matchDate}}</div>
+    <div class="matchTime border-right">{{matchItemData.matchTime}}</div>
     <div class="matchGroup">{{matchItemData.matchGroup}}</div>
-</div>
-<div class="fixtures-table-middle">
-    <div class="z1 teamOneName">{{matchItemData.teamOneName}}</div>
-    <div class="z1 teamOneScore">2</div>
-    <div class="z1 teamTwoScore">1</div>
-    <div class="z1 teamTwoName">{{matchItemData.teamTwoName}}</div>
-</div>
-<div class="fixtures-table-right">
+    <div class="teamOneFlagContainer">
+        <img class="flag img-teamOne teamOneFlag" [src]="flagTeamOne">
+    </div>
+    <div class="z1 teamOneName shift-names-left">{{matchItemData.teamOneName}}</div>
+    <input class="teamOneScore">
+    <div class="score-dash">-</div>
+    <input class="teamTwoScore">
+    <div class="z1 teamTwoName shift-names-right">{{matchItemData.teamTwoName}}</div>
+    <div class="teamTwoFlagContainer">
+        <img class="flag img-teamTwo teamTwoFlag" [src]="flagTeamTwo">
+    </div>
     <div class="teamOneScorePredicted">3</div>
+    <div class="result-dash">-</div>
     <div class="teamTwoScorePredicted">1</div>
     <div class="points">4</div>
-    <img class="img img-teamTwo teamTwoFlag" [src]="flagTeamTwo">
-</div> -->
-
-
-
-<div class="matchDate">{{matchItemData.matchDate}}</div>
-<div class="matchTime">{{matchItemData.matchTime}}</div>
-<div class="matchGroup">{{matchItemData.matchGroup}}</div>
-<div class="teamOneFlagContainer">
-    <img class="img img-teamOne teamOneFlag" [src]="flagTeamOne">
-    <!-- <div class="test"></div> -->
 </div>
-<div class="z1 teamOneName">{{matchItemData.teamOneName}}</div>
-<div class="z1 teamOneScore">2</div>
-<div class="z1 teamTwoScore">1</div>
-<div class="z1 teamTwoName">{{matchItemData.teamTwoName}}</div>
-<div class="teamTwoFlagContainer">
-    <img class="img img-teamTwo teamTwoFlag" [src]="flagTeamTwo">
-</div>
-<div class="teamOneScorePredicted">3</div>
-<div class="teamTwoScorePredicted">1</div>
-<div class="points">4</div>
-

@@ -1,5 +1,5 @@
 import { MatchdayDataService } from '../../../../../e2e/app/matchday-data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-fixtures-table',
@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class FixturesTableComponent implements OnInit {
 
 
+  @ViewChild('matchItem') appContainerRef: ElementRef;
 
   matches: string[] = [
     'match', 'match', 'match',
@@ -22,13 +23,25 @@ export class FixturesTableComponent implements OnInit {
   ];
 
   matchData;
+  todayActive;
 
-
+  // ifToday() {
+  //   this.matchData.forEach(element => {
+  //     if (element.matchGroup === 'A') {
+  //       this.todayActive = true;
+  //       console.log(element.matchGroup + 'asd');
+  //     }
+  //   });
+  // }
 
   constructor(private matchdayDataService: MatchdayDataService) { }
 
   ngOnInit() {
     this.matchData = this.matchdayDataService.matches;
+    // this.ifToday();
   }
+
+
+
 
 }

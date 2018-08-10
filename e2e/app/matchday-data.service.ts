@@ -17,7 +17,7 @@ export class MatchdayDataService {
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
       new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
-      'A', 'England', 'Germany',
+      'B', 'England', 'Germany',
     ),
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
@@ -27,12 +27,12 @@ export class MatchdayDataService {
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
       new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
-      'A', 'Brazil', 'Argentina',
+      'B', 'Brazil', 'Argentina',
     ),
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
       new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
-      'A', 'Belgium', 'Portugal',
+      'C', 'Belgium', 'Portugal',
     )
   ];
 
@@ -40,8 +40,8 @@ export class MatchdayDataService {
 
   constructor(private flagsService: FlagsService,
     private http: HttpClient) {
-    console.log(this.configUrl);
-    console.log(this.http.get(this.configUrl));
+    // console.log(this.configUrl);
+    // console.log(this.http.get(this.configUrl));
   }
 
 

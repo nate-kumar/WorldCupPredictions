@@ -1,183 +1,200 @@
-.matchDate {
-    grid-column: 1 / span 1;
+@import 'src/app/fixtures/matchday/fixtures-table/fixtures-table.component.scss';
+@import '~styles.scss';
+
+$lockedGrey: rgb(240, 240, 240);
+$activeBorderColor: rgb(139,230,216);
+
+:host {
+    --today-active-color: rgb(226,226,226);
+    --score-active-color: $lockedGrey;
+}
+@mixin matchElements() {
     grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: calc(100% - 5px);
-    position: relative;
-    left: 2.5px;
+    background: $lockedGrey;
+    height: calc(#{$fixtures-table-row-height} - 10px);
     display: grid;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+@mixin borderEnds($direction) {
+    width: calc(100% - 5px);
+    position: relative;
+    @if $direction == 'left' {
+        left: 2.5px;
+    }
+    @else {
+        right: 2.5px;
+    }
+}
+
+.match-item-container {
+    display: grid;
+    height: $fixtures-table-row-height;
+    @include fixtures-table-columns();
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--today-active-color);
+}
+
+.matchDate {
+    grid-column: 1 / span 1;
+    @include matchElements();
+    @include borderEnds('left');
 }
 
 .matchTime {
     grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    @include matchElements();
 }
 
 .matchGroup {
     grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    @include matchElements();
 }
 
-.teamOneFlag {
+// Flags
+.flag {
+    transform: scale(1.1) skew(-4deg);
     height: auto;
     width: 100%;
     overflow: hidden;
+
+}
+.teamOneFlag {
+    // clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    mask-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 1), 
+    rgba(0, 0, 0, 0.5) 50%, 
+    rgba(0, 0, 0, 0) 100%);
+
+}
+.teamTwoFlag {
+    // clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    mask-image: linear-gradient(to left, 
+    rgba(0, 0, 0, 1), 
+    rgba(0, 0, 0, 0.5) 50%, 
+    rgba(0, 0, 0, 0) 100%);
 }
 
-.teamOneFlagContainer {
-    grid-column: 5 / span 2;
+/*#region Flag Containers*/
+@mixin flagContainer() {
     grid-row: 1 / span 1;
     overflow: hidden;
     width: 100%;
-    height: 60px;
+    height: calc(#{$fixtures-table-row-height} - 10px);
     display: grid;
     align-items: center;
     background: rgb(240,240,240);
 }
+.teamOneFlagContainer {
+    grid-column: 5 / span 2;
+    @include flagContainer();
+}
+.teamTwoFlagContainer {
+    grid-column: 9 / span 2;
+    @include flagContainer();
+}
+/*#endregion*/
 
 .teamOneName {
     grid-column: 6 / span 1;
     grid-row: 1 / span 1;
     justify-self: right;
-    font-family: 'Concert One', cursive;
-    font-size: 18px;
+    font-size: 16px;
+    color: rgb(54, 54, 54)
 }
 
 .teamOneScore {
     grid-column: 7 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.teamTwoFlag {
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-}
-
-.teamTwoFlagContainer {
-    grid-column: 9 / span 2;
-    grid-row: 1 / span 1;
-    overflow: hidden;
-    z-index: 1;
-    width: 100%;
-    height: 60px;
-    display: grid;
-    align-items: center;
-    background: rgb(240,240,240);
+    @include matchElements();
+    background: white;
 }
 
 .teamTwoName {
     grid-column: 9 / span 1;
     grid-row: 1 / span 1;
     justify-self: left;
-    font-family: 'Concert One', cursive;
-    font-size: 18px;
+    font-size: 16px;
+    color: rgb(54, 54, 54);
 }
 
 .teamTwoScore {
     grid-column: 8 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    @include matchElements();
 }
 
 .teamOneScorePredicted {
     grid-column: 12 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    @include matchElements();
 }
 
 .teamTwoScorePredicted {
     grid-column: 13 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    @include matchElements();
 }
 
 .points {
     grid-column: 15 / span 1;
-    grid-row: 1 / span 1;
-    background: rgb(240,240,240);
-    height: 60px;
-    width: calc(100% - 5px);
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    right: 2.5px;
-}
-
-.img {
-    transform: scale(1.1) skew(-4deg);
-    // height: 80%;
-
-    // position: relative;
-    // left: 10px;
-}
-
-@mixin flag-background-direction($direction, $colorleft, $colormiddle, $colorright) {
-    mask-image: linear-gradient(to $direction, $colorleft, $colormiddle, $colorright);
-    @if $direction == 'left' { 
-    }
-    @else if $direction == 'right' { 
-    }
-}
-
-.img-teamOne {
-    @include flag-background-direction(right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 90%);
-}
-
-.img-teamTwo {
-    @include flag-background-direction(left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 90%);
+    @include matchElements();
+    @include borderEnds('right');
+    color: $dark-burgundy;
 }
 
 .z1 {
-    z-index: 3;
+    z-index: 1;
 }
 
 .z0 {
     z-index: 0;
 }
 
-.test {
-    background: red;
-    height: 100%;
-    width: 50%;
-    z-index: 4;
-    grid-column: 5 / span 2;
+.border-right {
+    border-right: 1px rgb(226, 226, 226) dashed;
+}
+
+.border-left {
+    border-left: 1px rgb(226, 226, 226) dashed;
+}
+
+.shift-names-right {
+    position: relative;
+    left: 1%;
+}
+
+.shift-names-left {
+    position: relative;
+    right: 1%;
+}
+
+input {
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.score-dash {
+    grid-column: 7 / span 2;
     grid-row: 1 / span 1;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.result-dash {
+    grid-column: 12 / span 2;
+    grid-row: 1 / span 1;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.today-active {
+    border: 2px solid $activeBorderColor;
+    // box-shadow: 1px 1px $activeBorderColor;
 }
