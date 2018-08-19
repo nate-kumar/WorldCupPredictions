@@ -1,3 +1,4 @@
+import { FlagsService } from './flags.service';
 import { Match } from './match';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -11,29 +12,42 @@ export class MatchdayDataService {
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
       new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
-      'A', 'England', 'France'
+      'A', 'Italy', 'France'
     ),
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
       new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
-      'A', 'England', 'France'
+      'B', 'England', 'Germany',
     ),
     new Match(
       new Date('February 4, 2016 10:13:00').toDateString(),
       new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
-      'A', 'England', 'France'
+      'A', 'Croatia', 'Spain',
+    ),
+    new Match(
+      new Date('February 4, 2016 10:13:00').toDateString(),
+      new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
+      'B', 'Brazil', 'Argentina',
+    ),
+    new Match(
+      new Date('February 4, 2016 10:13:00').toDateString(),
+      new Date('February 4, 2016 10:13:00').toLocaleTimeString(),
+      'C', 'Belgium', 'Portugal',
     )
   ];
 
   configUrl = 'https://raw.githubusercontent.com/lsv/fifa-worldcup-2018/master/data.json';
 
-  constructor(private http: HttpClient) {
-    console.log(this.configUrl);
+  constructor(private flagsService: FlagsService,
+    private http: HttpClient) {
+    // console.log(this.configUrl);
+    // console.log(this.http.get(this.configUrl));
   }
 
 
 
   getData() {
     return this.http.get(this.configUrl);
+
   }
 }

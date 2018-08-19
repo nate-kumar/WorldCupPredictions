@@ -1,0 +1,29 @@
+@import '~_zindex.scss';
+@import '~_colours.scss';
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+
+//Font Families
+$roboto: 'Roboto', sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+@mixin bottom-border-gradient($thickness, $dark-color, $light-color) {
+    border-bottom: $thickness solid;  
+    border-image-source: linear-gradient($dark-color, $light-color);
+    border-image-slice: 100;
+}
+
+
+
+

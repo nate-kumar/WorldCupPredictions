@@ -10,7 +10,7 @@
     <div class="titlePoints">Pts</div>
   </div>
   <ng-container *ngFor="let match of matchData">
-    <app-match-item class="fixtures-table-row" *ngIf="match!=='break'" [matchItemData]="match"></app-match-item>
+    <app-match-item *ngIf="match!=='break'" [matchItemData]="match"></app-match-item>
     <div class="blank-row" *ngIf="match==='break'"></div>
   </ng-container>
 </div>

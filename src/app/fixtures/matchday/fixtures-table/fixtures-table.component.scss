@@ -1,0 +1,91 @@
+.fixtures-table-container {
+    display: grid;
+    grid-gap: 6px;
+    /* grid-auto-rows: minmax(6px,auto); */
+}
+
+@mixin fixtures-table-columns {
+    grid-template-columns: 150px 100px 55px 5px 25px 110px 40px 40px 110px 25px 5px 40px 40px 5px 45px;
+}
+
+.fixtures-table-header {
+    display: grid;
+    height: 30px;
+    @include fixtures-table-columns();
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+    background: rgb(133, 9, 9);
+    color: white;
+}
+
+$fixtures-table-row-height: 70px;
+
+// .fixtures-table-row {
+//     display: grid;
+//     height: $fixtures-table-row-height;
+//     @include fixtures-table-columns();
+//     font-size: 14px;
+//     // font-family: 'Montserrat', sans-serif;
+//     font-family: 'Nunito', sans-serif;
+//     font-weight: bold;
+//     justify-items: center;
+//     align-items: center;
+//     background-color: rgb(255, 255, 255);
+//     border: 1px solid rgb(226, 226, 226);
+//     overflow: hidden;
+// }
+
+.titleMatchDate {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleMatchTime {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleMatchGroup {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.titleTeamOne {
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titleScore {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titleTeamTwo {
+    grid-column: 9 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titleResult {
+    grid-column: 12 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.titlePoints {
+    grid-column: 15 / span 1;
+    grid-row: 1 / span 1;
+}
+
+:root {
+    --today-active: true;
+}
+
+// .today-active {
+//     @if(--today-active) {
+//         background: green;
+//     } @else {
+//         background: rgb(240,240,240);
+//     }
+// }

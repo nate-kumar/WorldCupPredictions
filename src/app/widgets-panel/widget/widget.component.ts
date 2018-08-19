@@ -1,10 +1,10 @@
-import { ScoreboardService } from './../../scoreboard.service';
+import { ScoreboardService } from '../../scoreboard.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-widget',
   templateUrl: './widget.component.html',
-  styleUrls: ['./widget.component.css']
+  styleUrls: ['./widget.component.scss']
 })
 export class WidgetComponent implements OnInit {
 

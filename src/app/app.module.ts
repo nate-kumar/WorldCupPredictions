@@ -1,3 +1,5 @@
+import { FlagsService } from './../../e2e/app/flags.service';
+import { RoutingModule } from './routing.module';
 import { ScoreboardService } from './scoreboard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MatchdayComponent } from './fixtures/matchday/matchday.component';
 import { FixturesTableComponent } from './fixtures/matchday/fixtures-table/fixtures-table.component';
 import { MatchItemComponent } from './fixtures/matchday/fixtures-table/match-item/match-item.component';
+import { TestCompComponent } from './test-comp/test-comp.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +28,15 @@ import { MatchItemComponent } from './fixtures/matchday/fixtures-table/match-ite
     FooterComponent,
     MatchdayComponent,
     FixturesTableComponent,
-    MatchItemComponent
+    MatchItemComponent,
+    TestCompComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
-  providers: [ScoreboardService],
+  providers: [ScoreboardService, FlagsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
