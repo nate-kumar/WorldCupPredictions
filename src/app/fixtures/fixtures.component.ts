@@ -1,3 +1,4 @@
+import { MatchdayDataService } from './../matchday-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,9 +12,19 @@ export class FixturesComponent implements OnInit {
     'Matchday 1', 'Matchday 2', 'Matchday 3'
   ];
 
-  constructor() { }
+  matches: any;
+
+  constructor(private matchdayDataS: MatchdayDataService) { }
 
   ngOnInit() {
+    this.matchdayDataS.getData().subscribe(
+      (response) => {
+        this.matches = response;
+        console.log(this.matches);
+      }
+    );
   }
+
+
 
 }

@@ -1,4 +1,5 @@
 <div class="fixtures-container">
   <div class="fixtures-title centred-box">Fixtures</div>
+  <p>{{ matches?.groups.a.matches[0].date }}</p>
   <app-matchday class="matchday" *ngFor="let match of matchdays" [titleText]="match"></app-matchday>
 </div>

@@ -1,4 +1,4 @@
-<div [ngClass]="{'today-active':matchItemData.matchGroup === 'A'}" class="match-item-container" #matchItemContainer>
+<form (ngSubmit)="onSubmit()" [ngClass]="{'today-active':matchItemData.matchGroup === 'A'}" class="match-item-container" #f="ngForm">
     <div class="matchDate border-right">{{matchItemData.matchDate}}</div>
     <div class="matchTime border-right">{{matchItemData.matchTime}}</div>
     <div class="matchGroup">{{matchItemData.matchGroup}}</div>
@@ -6,9 +6,9 @@
         <img class="flag img-teamOne teamOneFlag" [src]="flagTeamOne">
     </div>
     <div class="z1 teamOneName shift-names-left">{{matchItemData.teamOneName}}</div>
-    <input class="teamOneScore">
+    <input type="text" class="teamOneScore" name="scoreOne" ngModel>
     <div class="score-dash">-</div>
-    <input class="teamTwoScore">
+    <input type="text" class="teamTwoScore" name="scoreTwo" ngModel>
     <div class="z1 teamTwoName shift-names-right">{{matchItemData.teamTwoName}}</div>
     <div class="teamTwoFlagContainer">
         <img class="flag img-teamTwo teamTwoFlag" [src]="flagTeamTwo">
@@ -17,4 +17,7 @@
     <div class="result-dash">-</div>
     <div class="teamTwoScorePredicted">1</div>
     <div class="points">4</div>
-</div>
+    <button type="submit" style="display:none">Submit</button>
+</form>
+
+<!-- <p>{{ teamOneScore }}</p> -->

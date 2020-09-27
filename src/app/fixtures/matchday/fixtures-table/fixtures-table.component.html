@@ -9,7 +9,7 @@
     <div class="titleResult">Result</div>
     <div class="titlePoints">Pts</div>
   </div>
-  <ng-container *ngFor="let match of matchData">
+  <ng-container *ngFor="let match of matchData; let i = index">
     <app-match-item *ngIf="match!=='break'" [matchItemData]="match"></app-match-item>
     <div class="blank-row" *ngIf="match==='break'"></div>
   </ng-container>

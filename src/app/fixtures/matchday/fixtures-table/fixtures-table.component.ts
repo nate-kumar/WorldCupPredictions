@@ -1,4 +1,4 @@
-import { MatchdayDataService } from '../../../../../e2e/app/matchday-data.service';
+import { MatchdayDataService } from '../../../matchday-data.service';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 export class FixturesTableComponent implements OnInit {
 
 
-  @ViewChild('matchItem') appContainerRef: ElementRef;
+  @ViewChild('f') appContainerRef: ElementRef;
 
   matches: string[] = [
     'match', 'match', 'match',
@@ -37,7 +37,7 @@ export class FixturesTableComponent implements OnInit {
   constructor(private matchdayDataService: MatchdayDataService) { }
 
   ngOnInit() {
-    this.matchData = this.matchdayDataService.matches;
+    this.matchData = this.matchdayDataService.getMatches();
     // this.ifToday();
   }
 

@@ -2,7 +2,8 @@
 @import '~styles.scss';
 
 $lockedGrey: rgb(240, 240, 240);
-$activeBorderColor: rgb(139,230,216);
+// $activeBorderColor: rgb(139,230,216);
+$activeBorderColor: rgb(173, 223, 202);
 
 :host {
     --today-active-color: rgb(226,226,226);
@@ -127,6 +128,7 @@ $activeBorderColor: rgb(139,230,216);
 .teamTwoScore {
     grid-column: 8 / span 1;
     @include matchElements();
+    background: white;
 }
 
 .teamOneScorePredicted {
